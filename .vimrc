@@ -192,6 +192,9 @@ vnoremap // y/<C-R>"<CR>
 nnoremap <silent> <Tab> :bnext<CR>
 nnoremap <silent> <S-Tab> :bprevious<CR>
 
+" Close buffer
+nnoremap <Leader>q :Bdelete<CR>
+
 " ---------------------------------------------------------------------------- "
 " Leader Mappings                                                              "
 " ---------------------------------------------------------------------------- "
@@ -220,13 +223,6 @@ nnoremap <leader>ss z=
 nnoremap <leader>bd :bdelete<CR>
 nnoremap <leader>bn :bnext<CR>
 nnoremap <leader>bp :bprevious<CR>
-
-" Windows
-nnoremap <silent> <leader>wd <C-w>q
-nnoremap <silent> <leader>ww <C-w>w
-nnoremap <silent> <leader>wv <C-w>v
-nnoremap <silent> <leader>ws <C-w>s
-
 
 " ---------------------------------------------------------------------------- "
 " Auto Commands                                                                "
@@ -317,6 +313,9 @@ nnoremap <leader>tt :TagbarToggle<CR>
 
 "" doxygentoolkit.vim
 "let g:DoxygenToolkit_commentType = "C++"
+
+" nerdtree
+let g:NERDTreeWinSize=25
 
 " youcompleteme
 "let g:ycm_extra_conf_globlist=['~/.vim/*']
