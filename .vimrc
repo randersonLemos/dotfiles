@@ -220,9 +220,9 @@ nnoremap <leader>sp [s
 nnoremap <leader>ss z=
 
 " Buffers
-nnoremap <leader>bd :bdelete<CR>
-nnoremap <leader>bn :bnext<CR>
-nnoremap <leader>bp :bprevious<CR>
+"nnoremap <leader>bd :bdelete<CR>
+"nnoremap <leader>bn :bnext<CR>
+"nnoremap <leader>bp :bprevious<CR>
 
 " ---------------------------------------------------------------------------- "
 " Auto Commands                                                                "
