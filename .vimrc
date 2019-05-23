@@ -18,8 +18,11 @@ call plug#begin('~/.vim/plugged')
 "Plug 'ciaranm/detectindent'
 "Plug 'junegunn/fzf',                        { 'do': 'yes \| ./install' }
 "Plug 'junegunn/fzf.vim'
-Plug 'majutsushi/tagbar'
 "Plug 'mhinz/vim-signify'
+"Plug 'jdevlieghere/llvm.vim',               { 'for': 'llvm' }
+"Plug 'taketwo/vim-ros'
+"Plug 'vim-scripts/doxygentoolkit.vim',      { 'for': 'cpp' }
+Plug 'majutsushi/tagbar'
 Plug 'mhinz/vim-startify',                  { 'do': 'mkdir -p $HOME/.vim/files/info/' }
 Plug 'moll/vim-bbye'
 Plug 'scrooloose/nerdcommenter'
@@ -28,22 +31,14 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
-"Plug 'vim-scripts/doxygentoolkit.vim',      { 'for': 'cpp' }
 Plug 'octol/vim-cpp-enhanced-highlight',    { 'for': 'cpp' }
-"Plug 'jdevlieghere/llvm.vim',               { 'for': 'llvm' }
-
 Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
-
 Plug 'altercation/vim-colors-solarized'
 Plug 'nanotech/jellybeans.vim'
 Plug 'chriskempson/base16-vim'
-
 if has("python")
     Plug 'valloric/youcompleteme', { 'do': './install.py --clang-completer --gocode-completer --tern-completer --racer-completer' }
 endif
-
-Plug 'taketwo/vim-ros'
 
 call plug#end()
 
@@ -67,7 +62,7 @@ set background=dark             " Use a dark background
 set t_Co=256                    " Enable 256 colors in vim
 set backspace=indent,eol,start  " Delete over line breaks
 set binary                      " Enable binary support
-"set colorcolumn=80,120          " Show ruler columns
+set colorcolumn=80,120          " Show ruler columns
 set encoding=utf-8              " Use UTF-8 encoding
 set hidden                      " Hide buffers instead of closing them
 set laststatus=2                " Always display the status line
