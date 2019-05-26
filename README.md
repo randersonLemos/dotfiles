@@ -14,23 +14,23 @@
 > Than, to the end of the .bashrc file, add:
 
 ```
-# enable tab completion
-source ~/.git-completion.bash
-
-# colors!
+# Colors!
 green="\[\033[0;32m\]"
 blue="\[\033[0;34m\]"
 purple="\[\033[0;35m\]"
 reset="\[\033[0m\]"
 white="\[\e[1;37m\]"
 
+# Enable tab completion
+source ~/.git-completion.bash
+
 # change command prompt
 source ~/.git-prompt.sh
-export git_ps1_showdirtystate=1
+export GIT_PS1_SHOWDIRTYSTATE=1
 # '\u' adds the name of the current user to the prompt
 # '\$(__git_ps1)' adds git-related stuff
 # '\w' adds the name of the current directory
 export PS1="$purple\u$green\$(__git_ps1)$white \w $ $reset"
 ```
 
-> Attention: PS1 may be specified as ps1.
+> Attention: PS1 may be specified as ps1. Also the same for GIT_PS1_SHOWDIRTYSTATE
