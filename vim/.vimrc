@@ -1,12 +1,7 @@
 " plugins
-let need_to_install_plugins = 0
-if empty(glob('~/.vim/autoload/plug.vim'))
-    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    let need_to_install_plugins = 1
-endif
-
 call plug#begin()
+Plug 'ycm-core/YouCompleteMe'
+Plug 'dense-analysis/ale'
 Plug 'tpope/vim-sensible'
 Plug 'itchyny/lightline.vim'
 Plug 'joshdick/onedark.vim'
@@ -15,24 +10,13 @@ Plug 'airblade/vim-gitgutter'
 Plug 'preservim/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'jiangmiao/auto-pairs'
-Plug 'dense-analysis/ale'
 Plug 'majutsushi/tagbar'
 Plug 'vim-scripts/indentpython.vim'
-Plug 'lepture/vim-jinja'
-Plug 'alvan/vim-closetag'
 Plug 'maxmellon/vim-jsx-pretty'
 call plug#end()
 
 filetype plugin indent on
 syntax on
-
-if need_to_install_plugins == 1
-        echo "Installing plugins..."
-    silent! PlugInstall
-    echo "Done!"
-    q
-endif
 
 " always show the status bar
 set laststatus=2
@@ -56,9 +40,6 @@ set softtabstop=2
 set colorcolumn=80
 set expandtab
 set viminfo='25,\"50,n~/.viminfo
-
-" auto-pairs
-au FileType python let b:AutoPairs = AutoPairsDefine({"f'" : "'", "r'" : "'", "b'" : "'"})
 
 " mouse
 set mouse=a
@@ -168,21 +149,8 @@ let g:ale_python_flake8_options = '--ignore=E265,E501'
 " tags
 map <leader>t :TagbarToggle<CR>
 
-" copy, cut and paste
-vmap <C-c> "+y
+" copy and paste
+vmap <C-c> "+yi
 vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
 imap <C-v> <ESC>"+pa
-
-" disable autoindent when pasting text
-" source: https://coderwall.com/p/if9mda/automatically-set-paste-mode-in-vim-when-pasting-in-insert-mode
-let &t_SI .= "\<Esc>[?2004h"
-let &t_EI .= "\<Esc>[?2004l"
-
-function! XTermPasteBegin()
-    set pastetoggle=<Esc>[201~
-    set paste
-    return ""
-endfunction
-
-inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
