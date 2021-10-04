@@ -1,6 +1,6 @@
 # dotfiles
 ## VIM
-> Create file ".vimrc" at $HOME and on it write and save "source ~/dotfiles/.vimrc".
+> Create file ".vimrc" at $HOME and on it write and save "source ~/dotfiles/vim/.vimrc".
 
 > Install airline/powerline fonts from here "https://github.com/powerline/fonts".
 
