@@ -1,6 +1,6 @@
 # dotfiles
 ## VIM
-> Create file ".vimrc" at $HOME and on it write and save "source ~/dotfiles/.vimrc".
+> Create file ".vimrc" at $HOME and on it write and save "source ~/dotfiles/vim/.vimrc".
 
 > Install airline/powerline fonts from here "https://github.com/powerline/fonts".
 
@@ -22,10 +22,10 @@ reset="\[\033[0m\]"
 white="\[\e[1;37m\]"
 
 # Enable tab completion
-source ~/.git-completion.bash
+source ~/dotfiles/git-bash/.git-completion.bash
 
 # change command prompt
-source ~/.git-prompt.sh
+source ~/dotfiles/git-bash/.git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
 # '\u' adds the name of the current user to the prompt
 # '\$(__git_ps1)' adds git-related stuff
