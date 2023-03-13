@@ -29,7 +29,6 @@ Plug 'vim-scripts/indentpython.vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'tpope/vim-fugitive'
 Plug 'HerringtonDarkholme/yats.vim'
-Plug 'neoclide/coc.nvim'
 call plug#end()
 
 filetype plugin indent on
