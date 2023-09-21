@@ -57,22 +57,6 @@ set colorcolumn=80
 set expandtab
 set viminfo='25,\"50,n~/.viminfo
 
-" mouse
-set mouse=a
-let g:is_mouse_enabled = 1
-noremap <silent> <Leader>m :call ToggleMouse()<CR>
-function ToggleMouse()
-    if g:is_mouse_enabled == 1
-        echo "Mouse OFF"
-        set mouse=
-        let g:is_mouse_enabled = 0
-    else
-        echo "Mouse ON"
-        set mouse=a
-        let g:is_mouse_enabled = 1
-    endif
-endfunction
-
 " color scheme
 syntax on
 colorscheme onedark
