@@ -34,6 +34,8 @@ call plug#end()
 filetype plugin indent on
 syntax on
 
+set guifont=JetBrains\ Mono\ 12
+
 " always show the status bar
 set laststatus=2
 
@@ -144,7 +146,7 @@ map <C-e> <Plug>(ale_next_wrap)
 map <C-r> <Plug>(ale_previous_wrap)
 
 " ignoring some erros
-let g:ale_python_flake8_options = '--ignore=E265,E501'
+let g:ale_python_flake8_options = '--ignore=E265,E501,W291,E201,E303,E221,E202,W293,E211,E241,E126,E131,E203,E128,E701'
 
 " tags
 map <leader>t :TagbarToggle<CR>
